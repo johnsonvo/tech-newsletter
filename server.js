@@ -45,6 +45,11 @@ app.post('/signup', (req, res) => {
 
 })
 
+// GET Dashboard
+app.get('/dashboard', (rew, res) => {
+    res.render('dashboard');
+})
+
 
 //============================ Start Server ============================//
 
