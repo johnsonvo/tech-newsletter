@@ -3,6 +3,9 @@ const bodyParser = require('body-parser');
 const app = express();
 const PORT = process.env.PORT || 4000;
 
+
+app.set('view engine', 'ejs');
+
 //============================ MIDDLEWARE ============================//
 
 // Parse URL Encoded Data
@@ -20,6 +23,28 @@ app.use(express.static(__dirname + '/public'));
 app.get('/', (req, res) => {
     res.send('<h1>Newsletter</h1>');
 });
+
+// GET New User Route
+app.get('/signup', (req, res) => {
+    res.render('auth/signup');
+});
+
+// POST Create User Route
+app.post('/signup', (req, res) => {
+    console.log(req.body);
+    res.send('<h1>Successsss</h1>')
+
+
+    // // Authentification
+    // const errors = [];
+    // // take name as a string, .split with " ", returns array, check length of 2
+    // // if not, return error
+
+    // req.body.name
+
+
+})
+
 
 //============================ Start Server ============================//
 

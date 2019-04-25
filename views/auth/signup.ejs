@@ -1,0 +1,27 @@
+<% include ../partials/_head.ejs %>
+
+<section>
+    <div>
+        <h1>Sign Up</h1>
+        <form action="/signup" method="POST">
+            <div>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required />
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+            </div>
+            <input type="submit" value="Sign Up" />
+        </form>
+    </div>
+
+</section>
+
+
+
+
+
+
+
+<% include ../partials/_footer.ejs %>
