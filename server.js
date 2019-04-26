@@ -3,8 +3,10 @@ const bodyParser = require('body-parser');
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-
 app.set('view engine', 'ejs');
+
+// DATABASE
+const db = require('./models');
 
 //============================ MIDDLEWARE ============================//
 
@@ -31,8 +33,12 @@ app.get('/signup', (req, res) => {
 
 // POST Create User Route
 app.post('/signup', (req, res) => {
-    console.log(req.body);
-    res.send('<h1>Successsss</h1>')
+    // console.log(req.body);
+    // res.send('<h1>Successsss</h1>');
+    db.User.create(newUser, (err, newUser) => {
+        if (err) return res.render('auth/signup', { errors: [err] });
+        res.redirect('/signup');
+    });
 
 
     // // Authentification
