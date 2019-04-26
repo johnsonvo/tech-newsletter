@@ -1,6 +1,39 @@
 <% include ../partials/_head.ejs %>
 
 <section class="signup">
+    <!-- <div id="accordion">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                SIGN UP FOR THE LATEST NEWS
+                </button>
+            </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    <div class="container">
+                        <p class="lead">Join our community to receive weekly highlights.</p>
+                        <small>Don't worry, we won't spam you.</small>
+                        <form action="/signup" method="POST">
+                            <div>
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="First and Last Name (ex: John Smith)"
+                                required />
+                            </div>
+                            <div>
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="ex: youremail@gmail.com" required />
+                            </div>
+                            <p class="aside">Our <a href="#">Privacy Policy</a></p>
+                            <button type="submit" class="btn  signup-btn">SIGN UP</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
     <div class="banner">
         <p>SIGN UP FOR THE LATEST NEWS</p>
     </div>
@@ -19,15 +52,11 @@
                 </div>
                 <p class="aside">Our <a href="#">Privacy Policy</a></p>
 
-                <button type="button" class="btn  signup-btn">SIGN UP</button>
+                <button type="submit" class="btn  signup-btn">SIGN UP</button>
             </form>
     </div>
 
 </section>
-
-
-
-
 
 
 <% include ../partials/_footer.ejs %>

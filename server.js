@@ -19,7 +19,6 @@ app.use(bodyParser.json());
 // Serve Public Directory
 app.use(express.static(__dirname + '/public'));
 
-
 //============================ ROUTES ============================//
 
 // ROOT Route
@@ -39,18 +38,24 @@ app.post('/signup', (req, res) => {
 
 	// // Authentification
 	const errors = [];
+
+	if (!req.body.name) {
+		errors.push({ msg: 'Please enter your name' });
+	}
+
+	if (!req.body.email) {
+		errors.push({ msg: 'Please enter your email' });
+	}
+
+	if (errors.length) {
+		return res.render('auth/signup', { user: req.body, errors: errors });
+	}
 	// // take name as a string, .split with " ", returns array, check length of 2
 	// // if not, return error
 
-
 	db.User.create(req.body, (err, newUser) => {
 		if (err) return res.render('auth/signup', { errors: [err] });
-		// newUser.save()
-		// .then(user => {
-		//     res.send('Signed Up!');
-		// });
-        // res.json(newUser);
-        res.render('auth/success');
+		res.render('auth/success');
 	});
 });
 

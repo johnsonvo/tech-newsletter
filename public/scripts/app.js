@@ -18,4 +18,4 @@ console.log('LOGGING');
 
 $(document).ready(function() {
   $
-})
+});
