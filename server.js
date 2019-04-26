@@ -19,6 +19,7 @@ app.use(bodyParser.json());
 // Serve Public Directory
 app.use(express.static(__dirname + '/public'));
 
+
 //============================ ROUTES ============================//
 
 // ROOT Route
