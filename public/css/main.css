@@ -17,7 +17,7 @@ body {
     font-weight: 400;
 }
 
-/* Navigation */
+/*---- Navigation ----*/
 
 .navbar {
     background-color: white;
@@ -44,26 +44,39 @@ body {
     font-size: 18pt;
     color: black;
 }
-.navbar-toggler {
-    background: darkgray;
+/* .navbar-toggler {
+    background: da;
+} */
+.navbard {
+    background-image: url('../images/icons8-menu.jpg') !important;
+    background-color: none;
+}
+/* .navbar-dark .navbar-toggler-icon {
+    background-image: url('../images/icons8-menu.eps')
+} */
+
+/*---- Sign Up ----*/
+
+div.card {
+     background: linear-gradient(rgb(131, 212, 136), rgb(137, 211, 211));
 }
 
-/* Sign Up */
-
-section.signup {
-    background: linear-gradient(rgb(131, 212, 136), rgb(137, 211, 211));
+div.card-header {
+    background: white;
 }
 div.container {
     max-width: 980px;
     padding: 5%;
     margin: 0 auto;
-    justify-content: center; /* This isn't working? */
+    text-align: center;
+    background: linear-gradient(rgb(131, 212, 136), rgb(137, 211, 211));
 }
 
 .banner {
     height: 25px;
     width: 100%;
     background: white;
+    text-align: center;
 }
 .banner > p {
     font-size: 15px;
@@ -71,7 +84,7 @@ div.container {
 }
 
 p.lead {
-    font-size: 19px;
+    font-size: 27px;
     color: #FFFFFF; 
     line-height: 26px;
     
@@ -83,6 +96,7 @@ label {
 }
 
 input {
+    width: 100%;
     padding: 5px;
     margin: 4px;
     margin: 0.1em auto 0.1em;
