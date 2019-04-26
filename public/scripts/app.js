@@ -19,3 +19,17 @@ console.log('LOGGING');
 $(document).ready(function() {
   $
 });
+
+
+
+
+
+
+
+// Error message handling
+
+// Validate name
+function validateName(name) {
+  console.log('Validate name function called')
+  alert(document.getElementById(name).value);
+};

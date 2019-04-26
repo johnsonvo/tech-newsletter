@@ -54,6 +54,7 @@ app.post('/signup', (req, res) => {
 	// // if not, return error
 
 	db.User.create(req.body, (err, newUser) => {
+		// 
 		if (err) return res.render('auth/signup', { errors: [err] });
 		res.render('auth/success');
 	});
